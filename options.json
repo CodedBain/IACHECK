@@ -1,0 +1,22 @@
+{
+    "pan": [
+        {"name": "Pan Blanco", "img": "assets/pan-blanco.webp"},
+        {"name": "Pan Integral", "img": "assets/pan-integral.webp"}
+    ],
+    "proteina": [
+        {"name": "Pollo", "img": "assets/pollo.webp"},
+        {"name": "Carne", "img": "assets/carne.webp"}
+    ],
+    "queso": [
+        {"name": "Cheddar", "img": "assets/cheddar.webp"},
+        {"name": "Mozzarella", "img": "assets/mozzarella.webp"}
+    ],
+    "vegetales": [
+        {"name": "Lechuga", "img": "assets/lechuga.webp"},
+        {"name": "Tomate", "img": "assets/tomate.webp"}
+    ],
+    "salsas": [
+        {"name": "Mayonesa", "img": "assets/mayonesa.webp"},
+        {"name": "Mostaza", "img": "assets/mostaza.webp"}
+    ]
+}

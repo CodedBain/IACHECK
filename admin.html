@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta Pinta - Panel de Control</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <h2><i class="fas fa-lock"></i> Iniciar Sesión</h2>
+        <form id="login-form" class="admin-form">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+        </form>
+    </div>
+
+    <div class="admin-container hidden" id="admin-container">
+        <aside class="sidebar">
+            <h1>Alta Pinta Admin</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" data-section="menu" class="active"><i class="fas fa-utensils"></i> Menú</a></li>
+                    <li><a href="#" data-section="orders"><i class="fas fa-shopping-cart"></i> Pedidos</a></li>
+                    <li><a href="#" data-section="hero"><i class="fas fa-image"></i> Hero</a></li>
+                    <li><a href="#" data-section="settings"><i class="fas fa-cog"></i> Ajustes</a></li>
+                    <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Salir</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Volver al Sitio</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="admin-content">
+            <!-- Menu Management -->
+            <section id="menu-section" class="admin-section">
+                <h2><i class="fas fa-utensils"></i> Gestión de Menú</h2>
+                <form id="sandwich-form" class="admin-form">
+                    <input type="text" id="sandwich-id" placeholder="ID (automático)" readonly>
+                    <input type="text" id="sandwich-name" placeholder="Nombre" required>
+                    <textarea id="sandwich-desc" placeholder="Descripción" required></textarea>
+                    <input type="text" id="sandwich-price" placeholder="Precio (ej: $9.990)" required>
+                    <input type="url" id="sandwich-img" placeholder="URL de la Imagen" required>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn"><i class="fas fa-save"></i> Guardar</button>
+                        <button type="button" id="clear-btn" class="btn secondary"><i class="fas fa-trash"></i> Limpiar</button>
+                    </div>
+                </form>
+                <div id="menu-list" class="menu-list"></div>
+            </section>
+
+            <!-- Orders Management -->
+            <section id="orders-section" class="admin-section hidden">
+                <h2><i class="fas fa-shopping-cart"></i> Pedidos Recibidos</h2>
+                <div id="order-list" class="menu-list"></div>
+            </section>
+
+            <!-- Hero Management -->
+            <section id="hero-section" class="admin-section hidden">
+                <h2><i class="fas fa-image"></i> Editar Hero</h2>
+                <form class="admin-form">
+                    <input type="text" id="hero-title" placeholder="Título del Hero">
+                    <textarea id="hero-desc" placeholder="Descripción del Hero"></textarea>
+                    <input type="url" id="hero-img" placeholder="URL de la Imagen">
+                    <button type="button" id="update-hero" class="btn"><i class="fas fa-sync"></i> Actualizar</button>
+                </form>
+            </section>
+
+            <!-- Settings -->
+            <section id="settings-section" class="admin-section hidden">
+                <h2><i class="fas fa-cog"></i> Ajustes Generales</h2>
+                <form class="admin-form">
+                    <input type="text" id="site-title" placeholder="Título del Sitio">
+                    <input type="color" id="primary-color" value="#ff6200" placeholder="Color Principal">
+                    <button type="button" id="update-settings" class="btn"><i class="fas fa-save"></i> Guardar</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

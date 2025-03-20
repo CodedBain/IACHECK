@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Clásico",
+        "desc": "Pan blanco, pollo, cheddar y vegetales frescos.",
+        "price": "$5.990",
+        "img": "assets/sandwich-classic.webp"
+    },
+    {
+        "id": 2,
+        "name": "Spicy",
+        "desc": "Pan integral, carne, mozzarella y salsa picante.",
+        "price": "$6.490",
+        "img": "assets/sandwich-spicy.webp"
+    }
+]

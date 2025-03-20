@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea tu sándwich perfecto en Alta Pinta. Ingredientes frescos, personalización y envío rápido.">
+    <meta name="keywords" content="sándwich personalizado, comida rápida, Alta Pinta, delivery">
+    <title>Alta Pinta - Sándwiches Artesanales</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <p>¡2x1 en sándwiches personalizados hoy!</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo animate-logo">Alta Pinta</div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="personaliza.html">Personaliza</a></li>
+                    <li><a href="#favorites">Favoritos</a></li>
+                    <li><a href="#emprendedores">Emprendedores</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" id="cart-toggle"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <button id="dark-mode-toggle" class="dark-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="personaliza.html">Personaliza</a></li>
+                <li><a href="#favorites">Favoritos</a></li>
+                <li><a href="#emprendedores">Emprendedores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" id="cart-toggle-mobile"><i class="fas fa-shopping-cart"></i> (<span id="cart-count-mobile">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
+            <div id="cart-items"></div>
+            <input type="text" id="promo-code" placeholder="Código de Descuento">
+            <input type="text" id="delivery-address" placeholder="Dirección de Envío" required>
+            <div class="cart-buttons">
+                <button id="clear-cart" class="btn secondary"><i class="fas fa-trash"></i> Vaciar</button>
+                <button id="checkout" class="btn"><i class="fas fa-whatsapp"></i> Enviar Pedido</button>
+            </div>
+            <button id="close-cart" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate-text">El Arte del Sándwich</h1>
+                <p class="animate-text delay-1">Sabores que despiertan, ingredientes que inspiran.</p>
+                <a href="personaliza.html" class="btn pulse"><i class="fas fa-bread-slice"></i> Crea el Tuyo</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-sandwich.webp" alt="Sándwich Hero" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2 class="section-title animate-text">Explora Nuestro Menú</h2>
+        <div class="menu-container" id="menu-container"></div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section id="favorites" class="menu-section">
+        <h2 class="section-title animate-text">Tus Favoritos</h2>
+        <div class="menu-container" id="favorites-container"></div>
+    </section>
+
+    <!-- Emprendedores Section -->
+    <section id="emprendedores" class="emprendedores-section">
+        <h2 class="section-title animate-text">Nuestros Emprendedores</h2>
+        <div class="emprendedores-container">
+            <div class="emprendedor-card animate-item">
+                <img src="assets/bakery.webp" alt="Panadería Local" loading="lazy">
+                <h3>Panadería El Horno</h3>
+                <p>Pan artesanal horneado diariamente con recetas tradicionales.</p>
+            </div>
+            <div class="emprendedor-card animate-item">
+                <img src="assets/farm.webp" alt="Granja Orgánica" loading="lazy">
+                <h3>Granja VerdeVida</h3>
+                <p>Vegetales orgánicos cultivados con amor y sostenibilidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto-section">
+        <h2 class="section-title animate-text">Contáctanos</h2>
+        <div class="contacto-container">
+            <form class="contacto-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h3>Alta Pinta</h3>
+                <p>El arte de comer bien.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explora</h4>
+                <ul>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="personaliza.html">Personaliza</a></li>
+                    <li><a href="#favorites">Favoritos</a></li>
+                    <li><a href="#emprendedores">Emprendedores</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/56912345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Alta Pinta. Diseñado con 🔥 para el mundo.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
